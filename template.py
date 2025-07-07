@@ -1,3 +1,13 @@
+'''
+Create a basic folder directory and file structure for the project.
+
+This code automatically creates the directory structure and creates new empty files.
+
+Inside /End-to-End-Cancer-Classification-using-MLFlow-DVC/
+Execute:
+    python template.py
+'''
+
 # importing necessary libraries
 import os
 from pathlib import Path
