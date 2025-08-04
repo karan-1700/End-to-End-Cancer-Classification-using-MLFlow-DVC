@@ -11,7 +11,7 @@ from pathlib import Path
 from box import ConfigBox
 from box.exceptions import BoxValueError
 from ensure import ensure_annotations
-from src.CNN_Classifier import logger
+from CNN_Classifier import logger
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
