@@ -11,3 +11,13 @@
 7. Update the pipeline: src/CNN_Classifier/pipeline
 8. Update main.py
 9. Update dvc.yaml
+
+### Dagshub
+
+Run this to export as env variables:
+
+```bash
+export MLFLOW_TRACKING_URI=https://dagshub.com/karan-1700/End-to-End-Cancer-Classification-using-MLFlow-DVC.mlflow
+export MLFLOW_TRACKING_USERNAME=karan-1700
+export MLFLOW_TRACKING_PASSWORD=<Password>
+```

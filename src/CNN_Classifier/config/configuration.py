@@ -4,6 +4,7 @@ from CNN_Classifier.utils.common import read_yaml, create_directories
 from CNN_Classifier.entity.config_entity import DataIngestionConfig
 from CNN_Classifier.entity.config_entity import PrepareBaseModelConfig
 from CNN_Classifier.entity.config_entity import TrainerConfig
+from CNN_Classifier.entity.config_entity import ModelEvaluationConfig
 
 class ConfigurationManager:
     def __init__(self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH):
@@ -66,3 +67,16 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+    
+
+    def get_evaluation_config(self) -> ModelEvaluationConfig:
+        evaluation_config = ModelEvaluationConfig(
+                path_to_model="artifacts/training/model.h5",
+                training_data_path="artifacts/data_ingestion/Chest-CT-Scan-data",
+                all_params=self.params,
+                mlflow_uri="https://dagshub.com/karan-1700/End-to-End-Cancer-Classification-using-MLFlow-DVC.mlflow",
+                params_image_size=self.params.IMAGE_SIZE,
+                params_batch_size=self.params.BATCH_SIZE,
+        )
+
+        return evaluation_config
