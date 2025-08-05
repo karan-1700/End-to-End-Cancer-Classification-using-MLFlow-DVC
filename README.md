@@ -28,3 +28,5 @@ To initialize DVC:
 Run `dvc init` in the terminal.
 Then, execute `dvc repro`.
 Then, when you want to train your model with any different params, run `dvc repro` instead of `main.py`.
+
+`dvg dag` prints a graph showing dependencies of all the pipelines in with one another.
