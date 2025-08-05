@@ -21,3 +21,10 @@ export MLFLOW_TRACKING_URI=https://dagshub.com/karan-1700/End-to-End-Cancer-Clas
 export MLFLOW_TRACKING_USERNAME=karan-1700
 export MLFLOW_TRACKING_PASSWORD=<Password>
 ```
+
+### DVC
+
+To initialize DVC:
+Run `dvc init` in the terminal.
+Then, execute `dvc repro`.
+Then, when you want to train your model with any different params, run `dvc repro` instead of `main.py`.

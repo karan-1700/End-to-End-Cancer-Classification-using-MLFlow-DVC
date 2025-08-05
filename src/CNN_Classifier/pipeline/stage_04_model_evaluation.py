@@ -14,7 +14,9 @@ class ModelEvaluationPipeline:
         model_evaluation_config = config.get_evaluation_config()
         model_evaluation = ModelEvaluation(config=model_evaluation_config)
         model_evaluation.evaluate()
-        model_evaluation.log_into_mlflow()
+        model_evaluation.save_score()
+        # # comment below line if you do not want your experiments to be logged in MLFlow.
+        # model_evaluation.log_into_mlflow()
 
 
 if __name__ == "__main__":
